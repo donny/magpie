@@ -6,4 +6,8 @@
 //  Copyright © 2017 Donny Kurniawan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ListTableViewCell: UITableViewCell {
+    @IBOutlet weak var title: UILabel!
+}

@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class List: NSObject {
+    var title: String
+    
+    init(title: String) {
+        self.title = title
+    }
+    
+    convenience override init() {
+        self.init(title: "")
+    }
+}

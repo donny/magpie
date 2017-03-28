@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01D02337FF065748F09D5675 /* Pods_Magpie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DA278F86FA5A789853EBA4 /* Pods_Magpie.framework */; };
+		5F040DE41E8A0B840076F2C2 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE31E8A0B840076F2C2 /* BoardViewController.swift */; };
+		5F040DE61E8A0EA10076F2C2 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */; };
+		5F040DE81E8A0EB30076F2C2 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F040DE71E8A0EB30076F2C2 /* ListTableViewCell.xib */; };
+		5F040DEA1E8A10050076F2C2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE91E8A10050076F2C2 /* List.swift */; };
+		5F60064A1E89F78700666DF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F6006491E89F78700666DF8 /* GoogleService-Info.plist */; };
+		5F60064C1E89F94400666DF8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F60064B1E89F94400666DF8 /* LogInViewController.swift */; };
 		5FAA245D1E88D1E7000575BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAA245C1E88D1E7000575BA /* AppDelegate.swift */; };
 		5FAA245F1E88D1E7000575BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAA245E1E88D1E7000575BA /* ViewController.swift */; };
 		5FAA24621E88D1E7000575BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAA24601E88D1E7000575BA /* Main.storyboard */; };
@@ -15,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00DA278F86FA5A789853EBA4 /* Pods_Magpie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magpie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F040DE31E8A0B840076F2C2 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		5F040DE71E8A0EB30076F2C2 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		5F040DE91E8A10050076F2C2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		5F6006491E89F78700666DF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5F60064B1E89F94400666DF8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5FAA24591E88D1E7000575BA /* Magpie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magpie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAA245C1E88D1E7000575BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FAA245E1E88D1E7000575BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +36,8 @@
 		5FAA24631E88D1E7000575BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FAA24661E88D1E7000575BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FAA24681E88D1E7000575BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C91403B919D6E23AC1661E6 /* Pods-Magpie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magpie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Magpie/Pods-Magpie.debug.xcconfig"; sourceTree = "<group>"; };
+		C1647F4E28DABD715DE5DBF8 /* Pods-Magpie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magpie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Magpie/Pods-Magpie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D02337FF065748F09D5675 /* Pods_Magpie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15ADAA19DC2F3DB058883B42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00DA278F86FA5A789853EBA4 /* Pods_Magpie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F040DE21E89FD410076F2C2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F60064B1E89F94400666DF8 /* LogInViewController.swift */,
+				5F040DE31E8A0B840076F2C2 /* BoardViewController.swift */,
+				5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */,
+				5F040DE71E8A0EB30076F2C2 /* ListTableViewCell.xib */,
+				5F040DE91E8A10050076F2C2 /* List.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		5FAA24501E88D1E7000575BA = {
 			isa = PBXGroup;
 			children = (
 				5FAA245B1E88D1E7000575BA /* Magpie */,
 				5FAA245A1E88D1E7000575BA /* Products */,
+				8EE6651CA41164830747A22F /* Pods */,
+				15ADAA19DC2F3DB058883B42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +95,23 @@
 			children = (
 				5FAA245C1E88D1E7000575BA /* AppDelegate.swift */,
 				5FAA245E1E88D1E7000575BA /* ViewController.swift */,
+				5F040DE21E89FD410076F2C2 /* ViewControllers */,
 				5FAA24601E88D1E7000575BA /* Main.storyboard */,
 				5FAA24631E88D1E7000575BA /* Assets.xcassets */,
 				5FAA24651E88D1E7000575BA /* LaunchScreen.storyboard */,
 				5FAA24681E88D1E7000575BA /* Info.plist */,
+				5F6006491E89F78700666DF8 /* GoogleService-Info.plist */,
 			);
 			path = Magpie;
+			sourceTree = "<group>";
+		};
+		8EE6651CA41164830747A22F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C91403B919D6E23AC1661E6 /* Pods-Magpie.debug.xcconfig */,
+				C1647F4E28DABD715DE5DBF8 /* Pods-Magpie.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FAA246B1E88D1E7000575BA /* Build configuration list for PBXNativeTarget "Magpie" */;
 			buildPhases = (
+				D6E2923EB1ADB28EECE5C4A5 /* [CP] Check Pods Manifest.lock */,
 				5FAA24551E88D1E7000575BA /* Sources */,
 				5FAA24561E88D1E7000575BA /* Frameworks */,
 				5FAA24571E88D1E7000575BA /* Resources */,
+				D947D3417D211E4D17533399 /* [CP] Embed Pods Frameworks */,
+				ACBA5EB827633837170FF320 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,12 +178,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FAA24671E88D1E7000575BA /* LaunchScreen.storyboard in Resources */,
+				5F60064A1E89F78700666DF8 /* GoogleService-Info.plist in Resources */,
 				5FAA24641E88D1E7000575BA /* Assets.xcassets in Resources */,
 				5FAA24621E88D1E7000575BA /* Main.storyboard in Resources */,
+				5F040DE81E8A0EB30076F2C2 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ACBA5EB827633837170FF320 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Magpie/Pods-Magpie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E2923EB1ADB28EECE5C4A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D947D3417D211E4D17533399 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Magpie/Pods-Magpie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5FAA24551E88D1E7000575BA /* Sources */ = {
@@ -139,6 +242,10 @@
 			files = (
 				5FAA245F1E88D1E7000575BA /* ViewController.swift in Sources */,
 				5FAA245D1E88D1E7000575BA /* AppDelegate.swift in Sources */,
+				5F60064C1E89F94400666DF8 /* LogInViewController.swift in Sources */,
+				5F040DE41E8A0B840076F2C2 /* BoardViewController.swift in Sources */,
+				5F040DE61E8A0EA10076F2C2 /* ListTableViewCell.swift in Sources */,
+				5F040DEA1E8A10050076F2C2 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +364,7 @@
 		};
 		5FAA246C1E88D1E7000575BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C91403B919D6E23AC1661E6 /* Pods-Magpie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97PBC8H6EH;
@@ -270,6 +378,7 @@
 		};
 		5FAA246D1E88D1E7000575BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1647F4E28DABD715DE5DBF8 /* Pods-Magpie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97PBC8H6EH;
@@ -300,6 +409,7 @@
 				5FAA246D1E88D1E7000575BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
