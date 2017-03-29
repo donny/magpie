@@ -10,7 +10,6 @@
 		01D02337FF065748F09D5675 /* Pods_Magpie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DA278F86FA5A789853EBA4 /* Pods_Magpie.framework */; };
 		5F040DE41E8A0B840076F2C2 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE31E8A0B840076F2C2 /* BoardViewController.swift */; };
 		5F040DE61E8A0EA10076F2C2 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */; };
-		5F040DE81E8A0EB30076F2C2 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F040DE71E8A0EB30076F2C2 /* ListTableViewCell.xib */; };
 		5F040DEA1E8A10050076F2C2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE91E8A10050076F2C2 /* List.swift */; };
 		5F60064A1E89F78700666DF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F6006491E89F78700666DF8 /* GoogleService-Info.plist */; };
 		5F60064C1E89F94400666DF8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F60064B1E89F94400666DF8 /* LogInViewController.swift */; };
@@ -25,7 +24,6 @@
 		00DA278F86FA5A789853EBA4 /* Pods_Magpie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magpie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F040DE31E8A0B840076F2C2 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
-		5F040DE71E8A0EB30076F2C2 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		5F040DE91E8A10050076F2C2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		5F6006491E89F78700666DF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F60064B1E89F94400666DF8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -65,11 +63,36 @@
 			children = (
 				5F60064B1E89F94400666DF8 /* LogInViewController.swift */,
 				5F040DE31E8A0B840076F2C2 /* BoardViewController.swift */,
-				5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */,
-				5F040DE71E8A0EB30076F2C2 /* ListTableViewCell.xib */,
-				5F040DE91E8A10050076F2C2 /* List.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5F70F5FB1E8B52620084CC9B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5FAA24601E88D1E7000575BA /* Main.storyboard */,
+				5FAA24631E88D1E7000575BA /* Assets.xcassets */,
+				5FAA24651E88D1E7000575BA /* LaunchScreen.storyboard */,
+				5FAA24681E88D1E7000575BA /* Info.plist */,
+				5F6006491E89F78700666DF8 /* GoogleService-Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5F70F5FC1E8B52A90084CC9B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F040DE91E8A10050076F2C2 /* List.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5F70F5FD1E8B52B40084CC9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		5FAA24501E88D1E7000575BA = {
@@ -95,12 +118,10 @@
 			children = (
 				5FAA245C1E88D1E7000575BA /* AppDelegate.swift */,
 				5FAA245E1E88D1E7000575BA /* ViewController.swift */,
+				5F70F5FD1E8B52B40084CC9B /* Views */,
 				5F040DE21E89FD410076F2C2 /* ViewControllers */,
-				5FAA24601E88D1E7000575BA /* Main.storyboard */,
-				5FAA24631E88D1E7000575BA /* Assets.xcassets */,
-				5FAA24651E88D1E7000575BA /* LaunchScreen.storyboard */,
-				5FAA24681E88D1E7000575BA /* Info.plist */,
-				5F6006491E89F78700666DF8 /* GoogleService-Info.plist */,
+				5F70F5FC1E8B52A90084CC9B /* Models */,
+				5F70F5FB1E8B52620084CC9B /* SupportingFiles */,
 			);
 			path = Magpie;
 			sourceTree = "<group>";
@@ -181,7 +202,6 @@
 				5F60064A1E89F78700666DF8 /* GoogleService-Info.plist in Resources */,
 				5FAA24641E88D1E7000575BA /* Assets.xcassets in Resources */,
 				5FAA24621E88D1E7000575BA /* Main.storyboard in Resources */,
-				5F040DE81E8A0EB30076F2C2 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
