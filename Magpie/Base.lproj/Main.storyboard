@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +13,7 @@
         <scene sceneID="IkP-CV-ffx">
             <objects>
                 <navigationController id="Luf-Nk-orR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KXc-dL-rFR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KXc-dL-rFR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -41,7 +40,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GsA-ca-9Xn"/>
                     <connections>
-                        <segue destination="wa0-Er-2HX" kind="show" identifier="successLogIn" id="lf4-E8-DFF"/>
+                        <segue destination="FIN-ck-907" kind="show" identifier="successLogIn" id="ptB-Ze-Vm0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3Y-II-F48" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -49,62 +48,56 @@
             <point key="canvasLocation" x="623" y="304"/>
         </scene>
         <!--Board View Controller-->
-        <scene sceneID="3Kd-Tm-xV1">
+        <scene sceneID="oEj-Wx-MiU">
             <objects>
-                <viewController id="wa0-Er-2HX" customClass="BoardViewController" customModule="Magpie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FIN-ck-907" customClass="BoardViewController" customModule="Magpie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="92l-Ii-mDf"/>
-                        <viewControllerLayoutGuide type="bottom" id="T8K-x2-oB3"/>
+                        <viewControllerLayoutGuide type="top" id="ZO7-fP-27n"/>
+                        <viewControllerLayoutGuide type="bottom" id="dUp-sp-F95"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9XB-C6-g0S">
+                    <view key="view" contentMode="scaleToFill" id="ifU-on-ask">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hmp-gw-TJd">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="35o-kT-9ho">
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" id="jr0-zm-DAS" customClass="ListTableViewCell" customModule="Magpie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" textLabel="HCe-XN-rTh" style="IBUITableViewCellStyleDefault" id="fBT-g6-L5E">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jr0-zm-DAS" id="hPl-0h-fkG">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBT-g6-L5E" id="5sX-W0-HVv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jil-kx-irx">
-                                                    <rect key="frame" x="150" y="11" width="42" height="21"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HCe-XN-rTh">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Jil-kx-irx" firstAttribute="centerY" secondItem="hPl-0h-fkG" secondAttribute="centerY" id="XIe-Fc-729"/>
-                                                <constraint firstItem="Jil-kx-irx" firstAttribute="centerX" secondItem="hPl-0h-fkG" secondAttribute="centerX" id="c9P-FV-wNQ"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="title" destination="Jil-kx-irx" id="Zfn-Sp-IY7"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Hmp-gw-TJd" firstAttribute="top" secondItem="92l-Ii-mDf" secondAttribute="bottom" id="Cxm-pQ-HEj"/>
-                            <constraint firstItem="Hmp-gw-TJd" firstAttribute="leading" secondItem="9XB-C6-g0S" secondAttribute="leadingMargin" id="R0H-Jb-rNG"/>
-                            <constraint firstItem="T8K-x2-oB3" firstAttribute="top" secondItem="Hmp-gw-TJd" secondAttribute="bottom" id="RPq-jk-9Lc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Hmp-gw-TJd" secondAttribute="trailing" id="diG-Os-AIa"/>
+                            <constraint firstItem="35o-kT-9ho" firstAttribute="centerY" secondItem="ifU-on-ask" secondAttribute="centerY" id="96X-Sh-ZTG"/>
+                            <constraint firstItem="35o-kT-9ho" firstAttribute="height" secondItem="ifU-on-ask" secondAttribute="height" id="PMd-Zd-kje"/>
+                            <constraint firstItem="35o-kT-9ho" firstAttribute="width" secondItem="ifU-on-ask" secondAttribute="width" id="nTn-9G-aT4"/>
+                            <constraint firstItem="35o-kT-9ho" firstAttribute="centerX" secondItem="ifU-on-ask" secondAttribute="centerX" id="tKF-28-SNi"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="Hmp-gw-TJd" id="3Xe-UP-sKr"/>
+                        <outlet property="tableView" destination="35o-kT-9ho" id="7Xe-m2-Hut"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DEp-rg-hYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Edm-g5-aPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455" y="304"/>
+            <point key="canvasLocation" x="1458" y="306"/>
         </scene>
     </scenes>
 </document>
