@@ -12,7 +12,6 @@ import Eureka
 import APESuperHUD
 
 class LogInViewController: FormViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         form +++ Section("Authentication")

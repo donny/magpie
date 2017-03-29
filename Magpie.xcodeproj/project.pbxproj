@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		01D02337FF065748F09D5675 /* Pods_Magpie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DA278F86FA5A789853EBA4 /* Pods_Magpie.framework */; };
 		5F040DE41E8A0B840076F2C2 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE31E8A0B840076F2C2 /* BoardViewController.swift */; };
-		5F040DE61E8A0EA10076F2C2 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */; };
+		5F040DE61E8A0EA10076F2C2 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE51E8A0EA10076F2C2 /* ListCollectionViewCell.swift */; };
 		5F040DEA1E8A10050076F2C2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F040DE91E8A10050076F2C2 /* List.swift */; };
+		5F5233A21E8C62280077D562 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5233A11E8C62280077D562 /* ListViewController.swift */; };
 		5F60064A1E89F78700666DF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F6006491E89F78700666DF8 /* GoogleService-Info.plist */; };
 		5F60064C1E89F94400666DF8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F60064B1E89F94400666DF8 /* LogInViewController.swift */; };
 		5FAA245D1E88D1E7000575BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAA245C1E88D1E7000575BA /* AppDelegate.swift */; };
@@ -23,8 +24,9 @@
 /* Begin PBXFileReference section */
 		00DA278F86FA5A789853EBA4 /* Pods_Magpie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magpie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F040DE31E8A0B840076F2C2 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
-		5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		5F040DE51E8A0EA10076F2C2 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F040DE91E8A10050076F2C2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		5F5233A11E8C62280077D562 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		5F6006491E89F78700666DF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F60064B1E89F94400666DF8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5FAA24591E88D1E7000575BA /* Magpie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magpie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 			children = (
 				5F60064B1E89F94400666DF8 /* LogInViewController.swift */,
 				5F040DE31E8A0B840076F2C2 /* BoardViewController.swift */,
+				5F5233A11E8C62280077D562 /* ListViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -90,7 +93,7 @@
 		5F70F5FD1E8B52B40084CC9B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5F040DE51E8A0EA10076F2C2 /* ListTableViewCell.swift */,
+				5F040DE51E8A0EA10076F2C2 /* ListCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -264,8 +267,9 @@
 				5FAA245D1E88D1E7000575BA /* AppDelegate.swift in Sources */,
 				5F60064C1E89F94400666DF8 /* LogInViewController.swift in Sources */,
 				5F040DE41E8A0B840076F2C2 /* BoardViewController.swift in Sources */,
-				5F040DE61E8A0EA10076F2C2 /* ListTableViewCell.swift in Sources */,
+				5F040DE61E8A0EA10076F2C2 /* ListCollectionViewCell.swift in Sources */,
 				5F040DEA1E8A10050076F2C2 /* List.swift in Sources */,
+				5F5233A21E8C62280077D562 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

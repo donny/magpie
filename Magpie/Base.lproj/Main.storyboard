@@ -63,7 +63,7 @@
                                 <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" textLabel="HCe-XN-rTh" style="IBUITableViewCellStyleDefault" id="fBT-g6-L5E">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="boardTableViewCell" textLabel="HCe-XN-rTh" style="IBUITableViewCellStyleDefault" id="fBT-g6-L5E">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBT-g6-L5E" id="5sX-W0-HVv">
@@ -81,6 +81,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="FIN-ck-907" id="LL5-jd-QxB"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,11 +96,76 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="35o-kT-9ho" id="7Xe-m2-Hut"/>
+                        <segue destination="EGe-A7-LEi" kind="show" identifier="listSelected" id="4pg-ws-Hqa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edm-g5-aPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1458" y="306"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="17t-Ba-hSX">
+            <objects>
+                <viewController id="EGe-A7-LEi" customClass="ListViewController" customModule="Magpie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lb9-Cd-5Ro"/>
+                        <viewControllerLayoutGuide type="bottom" id="DgH-mZ-qXw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AZp-GD-Cuy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GNw-YV-GeZ">
+                                <rect key="frame" x="0.0" y="-0.5" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LGg-BS-ejA">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="listCollectionViewCell" id="dql-Z5-E3z" customClass="ListCollectionViewCell" customModule="Magpie" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="0.0" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYf-Yf-MTu">
+                                                    <rect key="frame" x="79" y="89.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="CYf-Yf-MTu" firstAttribute="centerX" secondItem="dql-Z5-E3z" secondAttribute="centerX" id="5g0-SG-1UL"/>
+                                            <constraint firstItem="CYf-Yf-MTu" firstAttribute="centerY" secondItem="dql-Z5-E3z" secondAttribute="centerY" id="Akh-hM-fXz"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="title" destination="CYf-Yf-MTu" id="lUI-pa-zMu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GNw-YV-GeZ" firstAttribute="height" secondItem="AZp-GD-Cuy" secondAttribute="height" id="acD-kQ-NWj"/>
+                            <constraint firstItem="GNw-YV-GeZ" firstAttribute="centerY" secondItem="AZp-GD-Cuy" secondAttribute="centerY" id="dmc-6c-clj"/>
+                            <constraint firstItem="GNw-YV-GeZ" firstAttribute="centerX" secondItem="AZp-GD-Cuy" secondAttribute="centerX" id="fJJ-rZ-27S"/>
+                            <constraint firstItem="GNw-YV-GeZ" firstAttribute="width" secondItem="AZp-GD-Cuy" secondAttribute="width" id="fup-cw-UFb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="GNw-YV-GeZ" id="rOf-ml-2F2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXN-kA-Lp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297" y="302"/>
         </scene>
     </scenes>
 </document>

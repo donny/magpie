@@ -1,5 +1,5 @@
 //
-//  ListTableViewCell.swift
+//  ListCollectionViewCell.swift
 //  Magpie
 //
 //  Created by Donny Kurniawan on 28/3/17.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ListTableViewCell: UITableViewCell {
+class ListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
 }

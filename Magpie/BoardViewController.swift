@@ -11,18 +11,18 @@ import Firebase
 import FirebaseDatabaseUI
 
 class BoardViewController: UIViewController, UITableViewDelegate {
-    var dataSource: FUITableViewDataSource?
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    var dataSource: FUITableViewDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let ref = FIRDatabase.database().reference()
-        let query = ref.child("lists").queryOrderedByKey() /*or a more sophisticated query of your choice*/
+        let query = ref.child("lists").queryOrderedByKey()
         
         self.dataSource = self.tableView.bind(to: query, populateCell: { (tableView: UITableView, indexPath: IndexPath, snapshot: FIRDataSnapshot) -> UITableViewCell in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "boardTableViewCell", for: indexPath)
             guard let value = snapshot.value as? NSDictionary else { return cell }
             
             let title = value["title"] as? String ?? ""
@@ -37,6 +37,6 @@ class BoardViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "detail", sender: indexPath)
-    }    
+        performSegue(withIdentifier: "listSelected", sender: indexPath)
+    }
 }
