@@ -10,5 +10,7 @@ target 'Magpie' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'FirebaseUI'
+  pod 'Eureka'
+  pod 'APESuperHUD'
 
 end
