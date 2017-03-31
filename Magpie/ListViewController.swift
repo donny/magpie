@@ -14,15 +14,20 @@ class ListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dataSource: FUICollectionViewDataSource?
-    var listId: String?
+    var listData: FIRDataSnapshot?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let listId = listId else { return }
+        guard
+            let listData = listData,
+            let listDataValue = listData.value as? NSDictionary
+            else { return }
         
         let ref = FIRDatabase.database().reference()
-        let query = ref.child("cards").queryOrdered(byChild: "list").queryEqual(toValue: listId)
+        let query = ref.child("cards").queryOrdered(byChild: "list").queryEqual(toValue: listData.key)
+        
+        self.navigationItem.title = listDataValue["title"] as? String ?? ""
         
         self.dataSource = self.collectionView.bind(to: query, populateCell: { (collectionView: UICollectionView, indexPath: IndexPath, snapshot: FIRDataSnapshot) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "listCollectionViewCell", for: indexPath)
@@ -30,6 +35,10 @@ class ListViewController: UIViewController {
             guard let myCell = cell as? ListCollectionViewCell,
                 let value = snapshot.value as? NSDictionary
                 else { return cell }
+
+            cell.layer.borderColor = UIColor.black.cgColor
+            cell.layer.borderWidth = 1
+            cell.layer.cornerRadius = 4
             
             let title = value["title"] as? String ?? ""
             myCell.title.text = title

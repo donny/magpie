@@ -43,7 +43,7 @@ class BoardViewController: UIViewController, UITableViewDelegate {
             let item = dataSource?.items[selectedIndexPath.row]
             else { return }
         
-        listViewController.listId = item.key
+        listViewController.listData = item
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
