@@ -16,7 +16,7 @@ Magpie is the iOS app version of [Kestrel](https://github.com/donny/kestrel) usi
 
 ### Implementation
 
-The app is a standard iPhone app implemented using Swift and it's using [CocoaPods](https://cocoapods.org) as the dependency manager. Magpie uses [Eureka](https://github.com/xmartlabs/Eureka) to build the `LogInViewController` using custom operators:
+The app is a standard iPhone app implemented using Swift and it's using [CocoaPods](https://cocoapods.org) as the dependency manager. The app utilises [APESuperHUD](https://github.com/apegroup/APESuperHUD) to display the modal message view. In addition, Magpie uses [Eureka](https://github.com/xmartlabs/Eureka) to build the form for `LogInViewController` using custom operators:
 
 ```swift
 override func viewDidLoad() {
@@ -30,12 +30,31 @@ override func viewDidLoad() {
             $0.title = "Password"
             $0.tag = "password"
         }
-
     ...
 }
 ```
 
-And Magpie uses [APESuperHUD](https://github.com/apegroup/APESuperHUD) to display the modal message view.
+Magpie uses convenient classes as provided by the `FirebaseDatabaseUI` package to bind the Firebase data to a table view and a collection view. For example, here is the `viewDidLoad` implementation of `BoardViewController`:
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    ...
+    let ref = FIRDatabase.database().reference()
+    let query = ref.child("lists").queryOrderedByKey()
+
+    dataSource = tableView.bind(to: query, populateCell: { (tableView: UITableView, indexPath: IndexPath, snapshot: FIRDataSnapshot) -> UITableViewCell in
+        let cell = tableView.dequeueReusableCell(withIdentifier: "boardTableViewCell", for: indexPath)
+        guard let value = snapshot.value as? NSDictionary else { return cell }
+
+        let title = value["title"] as? String ?? ""
+        cell.textLabel?.text = title
+
+        return cell
+    })
+}
+
+```
 
 ### Conclusion
 
