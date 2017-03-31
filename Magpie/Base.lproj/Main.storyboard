@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +14,7 @@
         <scene sceneID="IkP-CV-ffx">
             <objects>
                 <navigationController id="Luf-Nk-orR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KXc-dL-rFR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KXc-dL-rFR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -67,11 +68,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBT-g6-L5E" id="5sX-W0-HVv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HCe-XN-rTh">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -126,14 +127,27 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="listCollectionViewCell" id="dql-Z5-E3z" customClass="ListCollectionViewCell" customModule="Magpie" customModuleProvider="target">
-                                        <rect key="frame" x="87.5" y="5" width="200" height="200"/>
+                                        <rect key="frame" x="88" y="5" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYf-Yf-MTu">
-                                                    <rect key="frame" x="79" y="89.5" width="42" height="21"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vjm-fZ-r7F">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nc-8v-iDE">
+                                                    <rect key="frame" x="13" y="171" width="50" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXy-eR-pST">
+                                                    <rect key="frame" x="68" y="171" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -141,11 +155,18 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="CYf-Yf-MTu" firstAttribute="centerX" secondItem="dql-Z5-E3z" secondAttribute="centerX" id="5g0-SG-1UL"/>
-                                            <constraint firstItem="CYf-Yf-MTu" firstAttribute="centerY" secondItem="dql-Z5-E3z" secondAttribute="centerY" id="Akh-hM-fXz"/>
+                                            <constraint firstItem="2nc-8v-iDE" firstAttribute="bottom" secondItem="dql-Z5-E3z" secondAttribute="bottomMargin" id="0qS-Gn-pcB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vjm-fZ-r7F" secondAttribute="trailing" id="9uV-qd-mKu"/>
+                                            <constraint firstItem="tXy-eR-pST" firstAttribute="leading" secondItem="2nc-8v-iDE" secondAttribute="trailing" constant="5" id="CpG-TX-szL"/>
+                                            <constraint firstItem="Vjm-fZ-r7F" firstAttribute="top" secondItem="dql-Z5-E3z" secondAttribute="top" id="Gk8-oI-VTq"/>
+                                            <constraint firstItem="2nc-8v-iDE" firstAttribute="leading" secondItem="dql-Z5-E3z" secondAttribute="leadingMargin" constant="5" id="MYZ-Hf-pHr"/>
+                                            <constraint firstItem="Vjm-fZ-r7F" firstAttribute="leading" secondItem="dql-Z5-E3z" secondAttribute="leading" id="VBC-Jv-BQB"/>
+                                            <constraint firstItem="tXy-eR-pST" firstAttribute="bottom" secondItem="dql-Z5-E3z" secondAttribute="bottomMargin" id="cnj-8a-m6s"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vjm-fZ-r7F" secondAttribute="bottom" constant="50" id="vh4-el-9tE"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="title" destination="CYf-Yf-MTu" id="lUI-pa-zMu"/>
+                                            <outlet property="score" destination="tXy-eR-pST" id="s9T-bt-z6E"/>
+                                            <outlet property="title" destination="Vjm-fZ-r7F" id="9XX-KR-Z1p"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

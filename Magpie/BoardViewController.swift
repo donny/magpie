@@ -17,6 +17,9 @@ class BoardViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationItem.hidesBackButton = true
+        navigationItem.title = "Magpie Board"
         
         let ref = FIRDatabase.database().reference()
         let query = ref.child("lists").queryOrderedByKey()

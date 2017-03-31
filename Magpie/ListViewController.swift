@@ -27,9 +27,9 @@ class ListViewController: UIViewController {
         let ref = FIRDatabase.database().reference()
         let query = ref.child("cards").queryOrdered(byChild: "list").queryEqual(toValue: listData.key)
         
-        self.navigationItem.title = listDataValue["title"] as? String ?? ""
+        navigationItem.title = listDataValue["title"] as? String ?? ""
         
-        self.dataSource = self.collectionView.bind(to: query, populateCell: { (collectionView: UICollectionView, indexPath: IndexPath, snapshot: FIRDataSnapshot) -> UICollectionViewCell in
+        dataSource = collectionView.bind(to: query, populateCell: { (collectionView: UICollectionView, indexPath: IndexPath, snapshot: FIRDataSnapshot) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "listCollectionViewCell", for: indexPath)
             
             guard let myCell = cell as? ListCollectionViewCell,
@@ -40,8 +40,8 @@ class ListViewController: UIViewController {
             cell.layer.borderWidth = 1
             cell.layer.cornerRadius = 4
             
-            let title = value["title"] as? String ?? ""
-            myCell.title.text = title
+            myCell.title.text = value["title"] as? String ?? ""
+            myCell.score.text = String(value["score"] as? Int ?? 0)
             
             return cell
         })

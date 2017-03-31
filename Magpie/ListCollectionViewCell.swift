@@ -9,5 +9,6 @@
 import UIKit
 
 class ListCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var title: UITextView!
+    @IBOutlet weak var score: UILabel!
 }
