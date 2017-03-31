@@ -56,6 +56,8 @@ override func viewDidLoad() {
 
 ```
 
+The above code binds the table view with the Firebase database query. The table view is updated automatically when the database changes (insertion, deletion, and modification)!
+
 ### Conclusion
 
-...
+Magpie is a simple iOS app for sprint retrospective meetings. Using the Firebase database in iOS is quite a straight forward process. And it is further simplified by using the Firebase convenient classes that bind the UI elements (table view or collection view) to the database query. This is quite a neat trick! This is the first time I use Eureka. Generally I don't like custom operators since it's very hard to decipher the meaning and we need to look up the documentation. But I guess with custom operators, methods to implement forms using Eureka become quite short and small. It's been a good learning process to use Firebase Web and iOS.
