@@ -16,7 +16,26 @@ Magpie is the iOS app version of [Kestrel](https://github.com/donny/kestrel) usi
 
 ### Implementation
 
-...
+The app is a standard iPhone app implemented using Swift and it's using [CocoaPods](https://cocoapods.org) as the dependency manager. Magpie uses [Eureka](https://github.com/xmartlabs/Eureka) to build the `LogInViewController` using custom operators:
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    form +++ Section("Authentication")
+        <<< EmailRow() { row in
+            row.title = "Email"
+            row.tag = "email"
+        }
+        <<< PasswordRow() {
+            $0.title = "Password"
+            $0.tag = "password"
+        }
+
+    ...
+}
+```
+
+And Magpie uses [APESuperHUD](https://github.com/apegroup/APESuperHUD) to display the modal message view.
 
 ### Conclusion
 
