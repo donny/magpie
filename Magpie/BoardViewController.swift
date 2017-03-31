@@ -21,7 +21,7 @@ class BoardViewController: UIViewController, UITableViewDelegate {
         let ref = FIRDatabase.database().reference()
         let query = ref.child("lists").queryOrderedByKey()
         
-        self.dataSource = self.tableView.bind(to: query, populateCell: { (tableView: UITableView, indexPath: IndexPath, snapshot: FIRDataSnapshot) -> UITableViewCell in
+        dataSource = tableView.bind(to: query, populateCell: { (tableView: UITableView, indexPath: IndexPath, snapshot: FIRDataSnapshot) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "boardTableViewCell", for: indexPath)
             guard let value = snapshot.value as? NSDictionary else { return cell }
             
@@ -34,6 +34,16 @@ class BoardViewController: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let listViewController = segue.destination as? ListViewController,
+            let selectedIndexPath = tableView.indexPathForSelectedRow,
+            let item = dataSource?.items[selectedIndexPath.row]
+            else { return }
+        
+        listViewController.listId = item.key
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

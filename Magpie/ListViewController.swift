@@ -14,12 +14,15 @@ class ListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dataSource: FUICollectionViewDataSource?
-    
+    var listId: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let listId = listId else { return }
+        
         let ref = FIRDatabase.database().reference()
-        let query = ref.child("lists").queryOrderedByKey()
+        let query = ref.child("cards").queryOrdered(byChild: "list").queryEqual(toValue: listId)
         
         self.dataSource = self.collectionView.bind(to: query, populateCell: { (collectionView: UICollectionView, indexPath: IndexPath, snapshot: FIRDataSnapshot) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "listCollectionViewCell", for: indexPath)
